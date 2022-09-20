@@ -6,9 +6,11 @@ public class RocketMovement : MonoBehaviour
     [SerializeField] private float rotationThrust;
 
     private Rigidbody rb;
+    private AudioSource audioSource;
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -22,6 +24,15 @@ public class RocketMovement : MonoBehaviour
         if (Input.GetKey(KeyCode.Space))
         {
             rb.AddRelativeForce(Vector3.up * mainThrust * Time.deltaTime);
+
+            if (!audioSource.isPlaying)
+            {
+                PlayAudio();
+            }
+        }
+        else
+        {
+            StopAudio();
         }
     }
 
@@ -44,5 +55,15 @@ public class RocketMovement : MonoBehaviour
         transform.Rotate(Vector3.forward * rotationThisFrame * Time.deltaTime);
 
         rb.freezeRotation = false; // unfreezing rotation so the physics system can take over.
+    }
+
+    private void PlayAudio()
+    {
+        audioSource.Play();
+    }
+
+    private void StopAudio()
+    {
+        audioSource.Stop();
     }
 }
