@@ -226,7 +226,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2673551488195568504, guid: c51e16081c468bf4b8cc42921e8c6ec2, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2673551488195568504, guid: c51e16081c468bf4b8cc42921e8c6ec2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -367,7 +367,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8560938307771100244, guid: 43066a1b5adb8cb43ab472a183b06df7, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8560938307771100244, guid: 43066a1b5adb8cb43ab472a183b06df7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -546,7 +546,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2063209799958531872, guid: 1c59906b4302e6a45b3bb28dc7af6e20, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.23
+      value: 4.53
       objectReference: {fileID: 0}
     - target: {fileID: 2063209799958531872, guid: 1c59906b4302e6a45b3bb28dc7af6e20, type: 3}
       propertyPath: m_LocalPosition.z
@@ -580,6 +580,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2063209799958531874, guid: 1c59906b4302e6a45b3bb28dc7af6e20, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d1d5dab423c70c6439ed31c96267e546, type: 2}
     - target: {fileID: 2063209799958531900, guid: 1c59906b4302e6a45b3bb28dc7af6e20, type: 3}
       propertyPath: m_Name
       value: Obstacle

@@ -206,6 +206,7 @@ GameObject:
   - component: {fileID: 7275914402060034379}
   - component: {fileID: 1081833884196639801}
   - component: {fileID: 7275914402060034388}
+  - component: {fileID: 652239640}
   m_Layer: 0
   m_Name: Rocket
   m_TagString: Untagged
@@ -357,6 +358,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainThrust: 1000
   rotationThrust: 100
+--- !u!114 &652239640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7275914402060034391}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a31c02503cd7b7489eb4cc91f041fb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7275914402428175222
 GameObject:
   m_ObjectHideFlags: 0
