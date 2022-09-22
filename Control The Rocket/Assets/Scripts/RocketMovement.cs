@@ -5,6 +5,9 @@ public class RocketMovement : MonoBehaviour
     [SerializeField] private float mainThrust;
     [SerializeField] private float rotationThrust;
     [SerializeField] private AudioClip mainEngineSFX;
+    [SerializeField] private ParticleSystem mainEngineParticle;
+    [SerializeField] private ParticleSystem leftThrusterParticle;
+    [SerializeField] private ParticleSystem rightThrusterParticle;
 
     private Rigidbody rb;
     private AudioSource audioSource;
@@ -30,10 +33,15 @@ public class RocketMovement : MonoBehaviour
             {
                 audioSource.PlayOneShot(mainEngineSFX);
             }
+            if (!mainEngineParticle.isPlaying)
+            {
+                mainEngineParticle.Play();
+            }
         }
         else
         {
             audioSource.Stop();
+            mainEngineParticle.Stop();
         }
     }
 
@@ -42,10 +50,25 @@ public class RocketMovement : MonoBehaviour
         if (Input.GetKey(KeyCode.A))
         {
             ApplyRotation(rotationThrust);
+
+            if (!rightThrusterParticle.isPlaying)
+            {
+                rightThrusterParticle.Play();
+            }
         }
         else if (Input.GetKey(KeyCode.D))
         {
             ApplyRotation(-rotationThrust);
+
+            if (!leftThrusterParticle.isPlaying)
+            {
+                leftThrusterParticle.Play();
+            }
+        }
+        else
+        {
+            rightThrusterParticle.Stop();
+            leftThrusterParticle.Stop();
         }
     }
 
